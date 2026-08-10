@@ -24,7 +24,7 @@ under the hood rather than just using them.
   <img src="https://github-readme-stats-five-sable-12.vercel.app/api?username=imInph&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" alt="GitHub Stats"/>
   
   <!-- 4. TOP LANGS -->
-  <img src="https://github-readme-stats-five-sable-12.vercel.app/api/top-langs/?username=imInph&layout=compact&theme=tokyonight&hide_border=true&hide=html" width="38%" alt="Top Langs"/>
+  <img src="https://github-readme-stats-five-sable-12.vercel.app/api/top-langs/?username=imInph&layout=compact&theme=tokyonight&hide_border=true&hide=html" width="37%" alt="Top Langs"/>
 </p>
 
 <p align="center">
