@@ -68,7 +68,6 @@ under the hood rather than just using them.
   
   <!-- 4. TOP LANGS -->
   <img src="https://github-readme-stats-five-sable-12.vercel.app/api/top-langs/?username=imInph&layout=compact&theme=tokyonight&hide_border=true&hide=html&cache_bust=1" width="37%" alt="Top Languages"/>
-</p>ps://github-readme-stats-five-sable-12.vercel.app/api/top-langs/?username=imInph&layout=compact&theme=tokyonight&hide_border=true&hide=html" width="37%" alt="Top Languages"/>
 </p>
 
 <p align="center">
