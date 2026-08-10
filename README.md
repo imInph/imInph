@@ -18,6 +18,15 @@ under the hood rather than just using them.
 | **Tools** | ![](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) ![](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat-square&logo=raspberry-pi&logoColor=white) ![](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white) |
 | **Data** | ![](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) ![](https://img.shields.io/badge/Microsoft_Access-A4373A?style=flat-square&logo=microsoftaccess&logoColor=white) ![](https://img.shields.io/badge/ADO.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white) |
 ---
+### Stats
+<p align="center">
+  <!-- 3. GITHUB STATS -->
+  <img src="https://github-readme-stats-five-sable-12.vercel.app/api?username=imInph&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" alt="GitHub Stats"/>
+  
+  <!-- 4. TOP LANGS -->
+  <img src="https://github-readme-stats-five-sable-12.vercel.app/api/top-langs/?username=imInph&layout=compact&theme=tokyonight&hide_border=true&hide=html" width="48%" alt="Top Langs"/>
+</p>
+---
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=imInph&color=58A6FF&label=views&style=flat-square" />
