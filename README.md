@@ -26,7 +26,6 @@ under the hood rather than just using them.
   <!-- 4. TOP LANGS -->
   <img src="https://github-readme-stats-five-sable-12.vercel.app/api/top-langs/?username=imInph&layout=compact&theme=tokyonight&hide_border=true&hide=html" width="48%" alt="Top Langs"/>
 </p>
----
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=imInph&color=58A6FF&label=views&style=flat-square" />
