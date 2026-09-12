@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm inph</h1>
+<h1 align="center">Hi, I'm Arda</h1>
 
 ---
 
