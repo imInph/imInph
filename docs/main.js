@@ -243,7 +243,7 @@ function print(html = " ", cls = "") {
 }
 
 function place() {
-  const n = input.selectionStart ?? input.value.length;
+  const n = asking ? 0 : input.selectionStart ?? input.value.length;
   caret.style.left = `calc(${input.offsetLeft}px + ${n - input.scrollLeft / caret.offsetWidth}ch)`;
 }
 ["input", "keyup", "click", "focus", "select"].forEach(e => input.addEventListener(e, place));
@@ -346,7 +346,10 @@ const COMMANDS = {
     print(`scanlines ${root.classList.contains("nocrt") ? "off" : "on"}.`);
   },
   uname() { print("Linux inphserver 6.8.0 x86_64 GNU/Linux"); },
-  sudo() { print("guest is not in the sudoers file. This incident will be reported."); },
+  sudo([what]) {
+    if (what === "su") return su();
+    print("guest is not in the sudoers file. This incident will be reported.");
+  },
   rm() { print("nice try."); },
   vim() { print("you'd never get out. no."); },
   exit() {
@@ -355,6 +358,7 @@ const COMMANDS = {
     setTimeout(() => $("#hello").scrollIntoView(), calm ? 0 : 500);
   },
   snake() { startGame(); },
+  su() { su(); },
 };
 COMMANDS.logout = COMMANDS.exit;
 COMMANDS.ll = COMMANDS.ls;
@@ -394,7 +398,12 @@ function complete() {
 }
 
 input.addEventListener("keydown", e => {
-  if (game) return;
+  if (game || busy) { if (busy) e.preventDefault(); return; }
+  if (asking) {
+    if (e.key === "Enter") { e.preventDefault(); meltdown(); }
+    else if (e.key === "Escape" || e.key === "c" && e.ctrlKey) { e.preventDefault(); unask(); print("Password: ^C"); }
+    return;
+  }
   if (e.key === "Enter") { run(input.value); input.value = ""; }
   else if (e.key === "Tab") { e.preventDefault(); complete(); }
   else if (e.key === "ArrowUp") { e.preventDefault(); if (hi > 0) input.value = history_[--hi]; }
@@ -407,6 +416,104 @@ out.addEventListener("click", e => {
   const a = e.target.closest("[data-jump]");
   if (a) { e.preventDefault(); $("#projects").scrollIntoView(); }
 });
+
+/* ---------- su: any password works, which is the problem ---------- */
+
+const ps = $(".ps"), guestPs = ps.innerHTML;
+let asking = false, busy = false;
+
+function su() {
+  asking = true;
+  ps.textContent = "Password: ";
+  input.type = "password";
+  input.classList.add("secret");
+  requestAnimationFrame(place);
+}
+
+function unask() {
+  asking = false;
+  input.type = "text";
+  input.classList.remove("secret");
+  input.value = "";
+  ps.innerHTML = guestPs;
+  requestAnimationFrame(place);
+}
+
+const OOPS = [
+  "audit: uid=1001 (guest) became uid=0 (root). that should not be possible",
+  "inphfs: secrets/ opened by someone who is not inph",
+  "BUG: unable to handle trust at 0000000000000000",
+  "Oops: 0002 [#1] PREEMPT SMP NOPTI",
+];
+
+async function meltdown() {
+  unask();
+  busy = true;
+  prompt.style.visibility = "hidden";
+  print("Password: ");
+  await sleep(1100);
+  print(`welcome back, <span class="b">inph</span>.`);
+  await sleep(800);
+  const line = print(`<span class="r">root@inphserver</span>:<span class="b">~</span># `);
+  const cur = cursor();
+  line.append(cur);
+  for (const ch of "cat secrets/*") {
+    cur.before(ch);
+    await sleep(calm ? 0 : 70 + Math.random() * 60);
+  }
+  await sleep(calm ? 0 : 500);
+  cur.remove();
+  if (!calm) root.classList.add("glitch");
+  let t = performance.now() / 1000;
+  for (const o of OOPS) {
+    print(`<span class="r">[${t.toFixed(6).padStart(12)}] ${o}</span>`);
+    t += Math.random() * 0.002;
+    await sleep(calm ? 0 : 220);
+  }
+  await sleep(calm ? 0 : 1100);
+  panic(t);
+}
+
+async function panic(t) {
+  root.classList.remove("glitch");
+  const box = document.createElement("div"), pre = document.createElement("pre");
+  box.id = "panic";
+  box.append(pre);
+  document.body.append(box);
+  const now = new Date(), why = "guest tried to be root";
+  const lines = [
+    `Kernel panic - not syncing: ${why}`,
+    "CPU: 0 PID: 1337 Comm: su Tainted: G      D            6.8.0-inph #1",
+    `Hardware name: inphserver/inphserver, BIOS 1.0 ${pad(now.getMonth() + 1)}/${pad(now.getDate())}/${now.getFullYear()}`,
+    "Call Trace:",
+    " <TASK>",
+    " dump_stack_lvl+0x48/0x70",
+    " panic+0x33c/0x370",
+    " do_exit+0x9b1/0xb20",
+    " make_task_dead+0x81/0x170",
+    " su_trust_stranger+0x42/0x42",
+    " secrets_open+0x1f/0x90",
+    " do_sys_openat2+0x97/0xe0",
+    " entry_SYSCALL_64_after_hwframe+0x78/0xe2",
+    " </TASK>",
+    "Kernel Offset: disabled",
+    "Rebooting in 3 seconds..",
+    `---[ end Kernel panic - not syncing: ${why} ]---`,
+  ];
+  for (const l of lines) {
+    pre.textContent += `[${t.toFixed(6).padStart(12)}] ${l}\n`;
+    t += Math.random() * 0.0004;
+    await sleep(calm ? 0 : 35);
+  }
+  await sleep(3000);
+  store.set("booted", null);
+  store.set("panicked", 1);
+  box.classList.add("off");
+  await sleep(calm ? 0 : 300);
+  history.scrollRestoration = "manual";
+  scrollTo({ top: 0, behavior: "instant" });
+  location.reload();
+}
 
 /* ---------- snake, in the terminal ---------- */
 
@@ -498,6 +605,12 @@ function startGame() {
 /* ---------- start ---------- */
 
 async function start() {
+  if (store.get("panicked")) {
+    store.set("panicked", null);
+    scrollTo({ top: 0, behavior: "instant" });
+    history.scrollRestoration = "auto";
+    print(`<span class="note">last boot ended in a kernel panic. let's not do that again.</span>`);
+  }
   if (!calm && !store.get("booted")) await boot();
   const wins = $$(".win");
   if (calm) { wins.forEach(show); return; }

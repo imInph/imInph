@@ -76,7 +76,7 @@ pre { margin: 0; font: inherit; white-space: normal; }
   box-shadow: calc(8 * var(--p)) 0 var(--yellow), calc(16 * var(--p)) 0 var(--green);
 }
 /* scanlines: a dark band through the bottom third of every font pixel row */
-.win::after, #boot::after {
+.win::after, #boot::after, #panic::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -89,7 +89,7 @@ pre { margin: 0; font: inherit; white-space: normal; }
   );
   background-position: 0 calc(var(--p) * 2 / 3 - var(--p) * 2 / 3);
 }
-html.nocrt .win::after, html.nocrt #boot::after { display: none; }
+html.nocrt .win::after, html.nocrt #boot::after, html.nocrt #panic::after { display: none; }
 
 .l { display: block; white-space: pre; min-height: 1em; }
 .wrap { white-space: pre-wrap; }
@@ -192,7 +192,7 @@ html.booting #boot {
 }
 html.booting #boot pre { white-space: pre; color: #C0C0C0; }
 html.booting main { visibility: hidden; }
-#boot.off { animation: off .28s ease-in forwards; }
+#boot.off, #panic.off { animation: off .28s ease-in forwards; }
 @keyframes off {
   0%   { transform: scale(1, 1); filter: brightness(1); }
   60%  { transform: scale(1, .004); filter: brightness(3); }
@@ -214,3 +214,24 @@ html.booting main { visibility: hidden; }
 
 .log { overflow: hidden; text-overflow: ellipsis; }
 #out { max-height: 60vh; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--edge) transparent; }
+
+/* su */
+#cmd.secret { color: transparent; }
+#panic {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: #000;
+  padding: calc(16 * var(--p));
+  overflow: hidden;
+}
+#panic pre { white-space: pre-wrap; color: #C0C0C0; }
+html.glitch main { animation: glitch .18s steps(1) infinite; }
+html.glitch .win { text-shadow: calc(2 * var(--p)) 0 rgba(248, 81, 73, .8), calc(-2 * var(--p)) 0 rgba(88, 166, 255, .8); }
+@keyframes glitch {
+  0%  { transform: translate(0, 0); filter: none; }
+  20% { transform: translate(calc(3 * var(--p)), calc(-1 * var(--p))); filter: hue-rotate(60deg) saturate(2); }
+  40% { transform: translate(calc(-4 * var(--p)), calc(2 * var(--p))) skewX(-2deg); filter: contrast(1.6); }
+  60% { transform: translate(calc(2 * var(--p)), 0); filter: invert(.08) brightness(1.4); }
+  80% { transform: translate(calc(-1 * var(--p)), calc(-2 * var(--p))) skewX(1deg); filter: hue-rotate(-40deg); }
+}
