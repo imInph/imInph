@@ -1,64 +1,78 @@
-<h1 align="center">Hi, I'm Arda</h1>
+<div align="center">
 
----
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=520&lines=Hi%2C+I%27m+Arda;Student+from+Turkey;I+build+my+own+tools" alt="Hi, I'm Arda" />
 
-<h1 align="center">About</h1>
+Into Linux and self-hosted stuff. I mostly build tools for myself,<br />
+then keep rebuilding them until I understand how every part works.
 
-Student from Turkey, into Linux and self-hosted stuff. Currently messing with
-homelab setups and writing C# and Python. I like understanding how things work
-under the hood rather than just using them.
+<br />
 
----
+### What I'm building
 
-<h1 align="center">Tech</h1>
-
-<table align="center">
+<table>
   <tr>
-    <td><b>Languages</b></td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-      <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" />
-      <img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=csharp&logoColor=white" />
-      <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
-      <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" />
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-      <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" />
+    <td width="33%" align="center" valign="top">
+      <h3><a href="https://github.com/imInph/inphub">inphub</a></h3>
+      <sub>v4.1</sub>
+      <p>My personal dashboard for money, tasks, habits, goals, notes and focus sessions. It runs on my own machine and has an optional AI chat through Claude, Ollama or LM Studio.</p>
+      <img alt="C#" src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
+      <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+      <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
     </td>
-  </tr>
-  <tr>
-    <td><b>Frontend</b></td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
+    <td width="33%" align="center" valign="top">
+      <h3><a href="https://github.com/imInph/inphner">inphner</a></h3>
+      <sub>v1.2</sub>
+      <p>A speedcubing timer and algorithm trainer, like csTimer with a calmer interface. It works offline, keeps everything in your browser and can connect to a Stackmat or a GAN smart cube.</p>
+      <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+      <img alt="PWA" src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" />
+      <br /><br />
+      <a href="https://iminph.github.io/inphner/"><b>Try it →</b></a>
     </td>
-  </tr>
-  <tr>
-    <td><b>Backend / Server</b></td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/XAMPP-FB7A24?style=flat-square&logo=xampp&logoColor=white" />
-      <img src="https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white" />
-    </td>
-  </tr>
-  <tr>
-    <td><b>Tools</b></td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
-      <img src="https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat-square&logo=raspberry-pi&logoColor=white" />
-      <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" />
-    </td>
-  </tr>
-  <tr>
-    <td><b>Data</b></td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
-      <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" />
-      <img src="https://img.shields.io/badge/Microsoft_Access-A4373A?style=flat-square&logo=microsoftaccess&logoColor=white" />
-      <img src="https://img.shields.io/badge/ADO.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
+    <td width="33%" align="center" valign="top">
+      <h3><a href="https://github.com/imInph/inphish">inphish</a></h3>
+      <sub>v5.0</sub>
+      <p>A UCI chess engine you can load into any chess GUI. The search is its own, and the evaluation uses Stockfish 19's NNUE network. Every release is tested in matches against other engines.</p>
+      <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
+      <img alt="UCI" src="https://img.shields.io/badge/UCI-17898A?style=flat-square&logo=lichess&logoColor=white" />
+      <br /><br />
+      <a href="https://github.com/imInph/inphish/releases/latest"><b>Download →</b></a>
     </td>
   </tr>
 </table>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=imInph&color=58A6FF&label=views&style=flat-square" />
-</p>
+<br />
+
+### Languages I write
+
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+<img alt="C#" src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img alt="Bash" src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" />
+
+<sub>My repos also have Rust, C, Java, PHP and Verilog in them. I don't know those yet, so they're not listed here.</sub>
+
+<br /><br />
+
+### Tools I use
+
+<img alt=".NET" src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
+<img alt="ADO.NET" src="https://img.shields.io/badge/ADO.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
+<img alt="Node.js" src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" />
+<img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
+<img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white" />
+<img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+<img alt="SQLite" src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" />
+<br />
+<img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
+<img alt="Raspberry Pi" src="https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white" />
+<img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+<img alt="Ollama" src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" />
+<img alt="LM Studio" src="https://img.shields.io/badge/LM_Studio-4338CA?style=flat-square&logoColor=white" />
+<img alt="XAMPP" src="https://img.shields.io/badge/XAMPP-FB7A24?style=flat-square&logo=xampp&logoColor=white" />
+
+<br /><br />
+
+<img alt="Profile views" src="https://komarev.com/ghpvc/?username=imInph&color=58A6FF&label=views&style=flat-square" />
+
+</div>
