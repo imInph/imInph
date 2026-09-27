@@ -80,6 +80,10 @@ def window(lines, title, extra=""):
                 out.append(f'<path fill="{color}" d="{d}"/>')
             col += len(text)
     out.append(extra)
+    # scanlines: a dark band one screen pixel tall through every font row (the README shows
+    # these at 1.5x, so a third of a font pixel is one pixel on a 2x display)
+    scan = "".join(f"M1 {y + 2 / 3:.4f}h{w - 2}v.3333h{2 - w}z" for y in range(1, h - 1))
+    out.append(f'<path fill="#000" opacity=".45" d="{scan}"/>')
     out.append("</svg>")
     return "".join(out)
 
