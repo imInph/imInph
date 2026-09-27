@@ -7,7 +7,7 @@ then keep rebuilding them until I understand how every part works.
 
 <br />
 
-### What I'm building
+<h3><img src="./assets/headings/building.svg" alt="What I'm building" height="88" /></h3>
 
 <table>
   <tr>
@@ -44,7 +44,7 @@ then keep rebuilding them until I understand how every part works.
 
 <br />
 
-### Languages I write
+<h3><img src="./assets/headings/languages.svg" alt="Languages I write" height="40" /></h3>
 
 <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -56,7 +56,7 @@ then keep rebuilding them until I understand how every part works.
 
 <br /><br />
 
-### Tools I use
+<h3><img src="./assets/headings/tools.svg" alt="Tools I use" height="40" /></h3>
 
 <img alt=".NET" src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
 <img alt="ADO.NET" src="https://img.shields.io/badge/ADO.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
@@ -75,6 +75,18 @@ then keep rebuilding them until I understand how every part works.
 
 <br /><br />
 
+<h3><img src="./assets/headings/snake.svg" alt="My GitHub year" height="40" /></h3>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/imInph/imInph/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/imInph/imInph/output/snake-light.svg" />
+  <img alt="A snake eating my contribution graph" src="https://raw.githubusercontent.com/imInph/imInph/output/snake-light.svg" />
+</picture>
+
+<br /><br />
+
 <img alt="Profile views" src="https://komarev.com/ghpvc/?username=imInph&color=58A6FF&label=views&style=flat-square" />
+
+<sub>The headings are drawn in the 8x16 font my <a href="https://github.com/imInph/inphex-monolyth">Tang Nano console</a> prints over HDMI.</sub>
 
 </div>
