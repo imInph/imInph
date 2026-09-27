@@ -425,14 +425,14 @@ let asking = false, busy = false;
 function su() {
   asking = true;
   ps.textContent = "Password: ";
-  input.type = "password";
+  // a plain text field with the text hidden: a real password field wakes up
+  // password managers, and some of them jump the page around
   input.classList.add("secret");
   requestAnimationFrame(place);
 }
 
 function unask() {
   asking = false;
-  input.type = "text";
   input.classList.remove("secret");
   input.value = "";
   ps.innerHTML = guestPs;
@@ -449,6 +449,11 @@ const OOPS = [
 async function meltdown() {
   unask();
   busy = true;
+  // stay exactly where the visitor is until the panic covers the page
+  const y = scrollY;
+  const hold = () => { if (Math.abs(scrollY - y) > 2) scrollTo({ top: y, behavior: "instant" }); };
+  addEventListener("scroll", hold);
+  meltdown.release = () => removeEventListener("scroll", hold);
   prompt.style.visibility = "hidden";
   print("Password: ");
   await sleep(1100);
@@ -475,6 +480,7 @@ async function meltdown() {
 }
 
 async function panic(t) {
+  meltdown.release();
   root.classList.remove("glitch");
   const box = document.createElement("div"), pre = document.createElement("pre");
   box.id = "panic";
