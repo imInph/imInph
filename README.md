@@ -7,7 +7,7 @@
 Into Linux and self-hosted stuff. I mostly build tools for myself,<br />
 then keep rebuilding them until I understand how every part works.
 
-<br />
+<hr />
 
 <h3><img src="./assets/headings/building.svg" alt="What I'm building" height="102" /></h3>
 
