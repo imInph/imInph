@@ -1,13 +1,15 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=520&lines=Hi%2C+I%27m+Arda;Student+from+Turkey;I+build+my+own+tools" alt="Hi, I'm Arda" />
+<img src="./assets/headings/session.svg" alt="whoami: inph. cat about.txt: Arda. Student from Turkey. I build my own tools." height="174" />
+
+<br />
 
 Into Linux and self-hosted stuff. I mostly build tools for myself,<br />
 then keep rebuilding them until I understand how every part works.
 
 <br />
 
-<h3><img src="./assets/headings/building.svg" alt="What I'm building" height="88" /></h3>
+<h3><img src="./assets/headings/building.svg" alt="What I'm building" height="102" /></h3>
 
 <table>
   <tr>
@@ -44,7 +46,7 @@ then keep rebuilding them until I understand how every part works.
 
 <br />
 
-<h3><img src="./assets/headings/languages.svg" alt="Languages I write" height="40" /></h3>
+<h3><img src="./assets/headings/languages.svg" alt="Languages I write" height="54" /></h3>
 
 <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -56,7 +58,7 @@ then keep rebuilding them until I understand how every part works.
 
 <br /><br />
 
-<h3><img src="./assets/headings/tools.svg" alt="Tools I use" height="40" /></h3>
+<h3><img src="./assets/headings/tools.svg" alt="Tools I use" height="54" /></h3>
 
 <img alt=".NET" src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
 <img alt="ADO.NET" src="https://img.shields.io/badge/ADO.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
@@ -75,7 +77,7 @@ then keep rebuilding them until I understand how every part works.
 
 <br /><br />
 
-<h3><img src="./assets/headings/snake.svg" alt="My GitHub year" height="40" /></h3>
+<h3><img src="./assets/headings/snake.svg" alt="My GitHub year" height="54" /></h3>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/imInph/imInph/output/snake-dark.svg" />
