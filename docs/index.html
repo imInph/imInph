@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>inph</title>
+<meta name="description" content="Arda. Student from Turkey. I build my own tools: a self-hosted dashboard, a speedcubing timer, a Rust chess engine and a RISC-V computer on a Tang Nano 9K.">
+<meta name="theme-color" content="#010409">
+<meta property="og:title" content="inph">
+<meta property="og:description" content="Student from Turkey. I build my own tools.">
+<meta property="og:url" content="https://iminph.github.io/imInph/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inphex.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<div id="boot" aria-hidden="true"><pre></pre></div>
+
+<main>
+
+<!-- the laptop -->
+<section class="win" id="hello" aria-label="whoami">
+<pre>
+<span class="l note">Last login: <span id="lastlogin">Sat Sep 27 14:02:11</span> on ttys001</span>
+<span class="l" data-cmd><span class="mac">inph@Ardas-MacBook-Air ~ % </span><span class="c">banner inph</span></span>
+<span class="l banner" aria-label="inph">   ██                   ▀██
+  ▄▄▄   ▄▄ ▄▄▄  ▄▄ ▄▄▄   ██ ▄▄
+   ██    ██  ██  ██  ██  ██▀ ██
+   ██    ██  ██  ██  ██  ██  ██
+  ▄██▄   ██  ██  ██▄▄█▀ ▄██  ██
+                 ██
+                ▀▀▀▀</span>
+<span class="l" data-cmd><span class="mac">inph@Ardas-MacBook-Air ~ % </span><span class="c">whoami</span></span>
+<span class="l">inph</span>
+<span class="l" data-cmd><span class="mac">inph@Ardas-MacBook-Air ~ % </span><span class="c">cat about.txt</span></span>
+<span class="l b">Arda. Student from Turkey.</span>
+<span class="l b">I build my own tools.</span>
+<span class="l" data-cmd><span class="mac">inph@Ardas-MacBook-Air ~ % </span><span class="c">ssh inph@192.168.1.111</span></span>
+<span class="l note">scroll down to connect <span class="blink">▾</span></span>
+</pre>
+</section>
+
+<!-- the server -->
+<section class="win" id="about" aria-label="about">
+<pre>
+<span class="l note">Last login: <span class="since">today</span> from 192.168.1.20</span>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat README</span>  <span class="note"># the longer version</span></span>
+<span class="l wrap">Into Linux and self-hosted stuff. I mostly build tools for myself, then keep rebuilding them until I understand how every part works.</span>
+<span class="l"> </span>
+<span class="l wrap">A lot of it starts as a fix for something that annoyed me: csTimer felt noisy, and flashing a Windows ISO from Linux kept breaking. Then it turns into a way to learn. A chess engine to learn search, an FPGA to learn how a computer actually boots.</span>
+<span class="l"> </span>
+<span class="l"><span class="k">name  </span>    Arda</span>
+<span class="l"><span class="k">from  </span>    Turkey</span>
+<span class="l"><span class="k">does  </span>    student, builds tools</span>
+<span class="l wrap"><span class="k">into  </span>    linux, self-hosting, speedcubing, chess engines, fpgas</span>
+<span class="l"><span class="k">github</span>    <a href="https://github.com/imInph">@imInph</a> since May 2024, <span id="repocount">7</span> public repos</span>
+</pre>
+</section>
+
+<!-- projects -->
+<section class="win" id="projects" aria-label="projects">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">ls -l projects/</span>  <span class="note"># what I'm building</span></span>
+<span class="l note">total 6</span>
+<span class="l ls"><a class="row" href="#p-inphub" data-p="inphub"><span class="note perm">drwxr-xr-x</span>  <span class="y">C#    </span>  <span class="v">v4.1.0</span>  <span class="note date">2026-09-24</span>  <span class="b">inphub/</span>          <span class="d">my dashboard, self-hosted</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphub-lite" data-p="inphub-lite"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.1.2</span>  <span class="note date">2026-09-27</span>  <span class="b">inphub-lite/</span>     <span class="d">the same, no server</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphner" data-p="inphner"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.2.0</span>  <span class="note date">2026-09-22</span>  <span class="b">inphner/</span>         <span class="d">speedcubing timer</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphish" data-p="inphish"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v5.0.0</span>  <span class="note date">2026-09-27</span>  <span class="b">inphish/</span>         <span class="d">UCI chess engine</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphiso" data-p="inphiso"><span class="note perm">-rwxr-xr-x</span>  <span class="y">Bash  </span>  <span class="v">      </span>  <span class="note date">2026-09-10</span>  <span class="p">inphiso</span>*         <span class="d">ISOs to USB, from Linux</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphex-monolyth" data-p="inphex-monolyth"><span class="note perm">drwxr-xr-x</span>  <span class="y">Verilog</span> <span class="v">      </span>  <span class="note date">2026-07-27</span>  <span class="b">inphex-monolyth/</span> <span class="d">computers on an FPGA</span></a></span>
+<span class="l note hint">click one, or use ↑ ↓</span>
+</pre>
+
+<div class="projs">
+
+<article class="proj" id="p-inphub">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphub/README</span></span>
+<span class="l"><span class="b hl">inphub</span> <span class="note">v4.1.0 · MIT</span></span>
+<span class="l wrap">A dashboard I built for myself to keep my own stuff in one place: money, tasks, habits, goals, notes, focus sessions, my GitHub repos and a log of what I changed. It runs on my own machine, not on a server.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> ASP.NET Core on .NET 10 with minimal APIs. The SQL is written out by hand over plain ADO.NET, no Entity Framework, no Dapper.</span>
+<span class="l wrap"><span class="p">▸</span> The frontend is TypeScript compiled to plain ES modules. No React, no bundler.</span>
+<span class="l wrap"><span class="p">▸</span> It used to be PHP. v4.0 moved most of it to C# and v4.1 moved the rest.</span>
+<span class="l wrap"><span class="p">▸</span> Widgets you drag around, <span class="c">k</span> to search everything, an Insights tab with charts across sections.</span>
+<span class="l wrap"><span class="p">▸</span> Optional AI chat through Claude, Ollama or LM Studio. Off by default, everything works without it.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">C#</span> <span class="tag">TypeScript</span> <span class="tag">MySQL</span>    <a href="https://github.com/imInph/inphub">source →</a></span>
+</pre>
+</article>
+
+<article class="proj" id="p-inphub-lite">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphub-lite/README</span></span>
+<span class="l"><span class="b hl">inphub-lite</span> <span class="note">v1.1.2 · AGPL-3.0</span></span>
+<span class="l wrap">The same dashboard as inphub with nothing behind it. No server, no database, no AI. It's a static site and everything it knows lives in your browser, so it opens on a phone, installs to the home screen and works on a plane.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> Same eleven views, same widgets, same shortcuts, down to the stylesheet.</span>
+<span class="l wrap"><span class="p">▸</span> IndexedDB instead of MySQL. 12 stores instead of 17 tables.</span>
+<span class="l wrap"><span class="p">▸</span> Both apps read and write the same backup file, so data moves either way.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">TypeScript</span> <span class="tag">PWA</span>    <a href="https://iminph.github.io/inphub-lite/">open it →</a>  <a href="https://github.com/imInph/inphub-lite">source →</a></span>
+</pre>
+</article>
+
+<article class="proj" id="p-inphner">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphner/README</span></span>
+<span class="l"><span class="b hl">inphner</span> <span class="note">v1.2.0</span></span>
+<span class="l wrap">A speedcubing timer and algorithm trainer. csTimer rebuilt with a calmer interface, clearer stats and a proper case trainer. Everything stays in your browser.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> Random-state scrambles for every WCA event, generated in a worker.</span>
+<span class="l wrap"><span class="p">▸</span> WCA-correct averages that update in a few ms, even at 50 000 solves.</span>
+<span class="l wrap"><span class="p">▸</span> Trainer for PLL, OLL and F2L with spaced repetition. Every bundled alg is checked by tests.</span>
+<span class="l wrap"><span class="p">▸</span> Optimal cross, XCross, EOLine and Roux block hints in any colour.</span>
+<span class="l wrap"><span class="p">▸</span> Plug in a Stackmat through the microphone, or a GAN smart cube over Bluetooth.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">TypeScript</span> <span class="tag">PWA</span>    <a href="https://iminph.github.io/inphner/">try it →</a>  <a href="https://github.com/imInph/inphner">source →</a></span>
+</pre>
+</article>
+
+<article class="proj" id="p-inphish">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphish/README</span></span>
+<span class="l"><span class="b hl">inphish</span> <span class="note">v5.0.0 · GPL-3.0</span></span>
+<span class="l wrap">A UCI chess engine in Rust. No board of its own: load it into any chess GUI and it talks UCI over stdin and stdout.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> Its own search: PVS, a transposition table, null-move, LMR, ProbCut, quiescence and Lazy SMP up to 256 threads.</span>
+<span class="l wrap"><span class="p">▸</span> Evaluates with Stockfish 19's NNUE network, run by inphish's own inference code, which matches Stockfish's output exactly.</span>
+<span class="l wrap"><span class="p">▸</span> Syzygy tablebases, Chess960, and an optional book of 6.4 million positions from 2000+ Lichess games.</span>
+<span class="l wrap"><span class="p">▸</span> Every release plays matches against Stockfish. 5.0 scored 12.5 / 20 at its highest setting.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">Rust</span> <span class="tag">UCI</span>    <a href="https://github.com/imInph/inphish/releases/latest">download →</a>  <a href="https://github.com/imInph/inphish">source →</a></span>
+</pre>
+</article>
+
+<article class="proj" id="p-inphiso">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphiso/README</span></span>
+<span class="l"><span class="b hl">inphiso</span></span>
+<span class="l wrap">One Bash script that flashes Windows and Linux images to USB drives from Linux, including the parts that usually break.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> Splits install.wim into .swm chunks when it's over FAT32's 4 GiB limit, which is basically every Windows 11 ISO.</span>
+<span class="l wrap"><span class="p">▸</span> Streams .xz, .gz, .bz2 and .zst images straight into dd. Nothing gets unpacked first.</span>
+<span class="l wrap"><span class="p">▸</span> Works out if the image is Windows or Linux. If it can't tell, it asks.</span>
+<span class="l wrap"><span class="p">▸</span> You type YES before it writes anything, and the system disk isn't even in the list.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">Bash</span>    <a href="https://github.com/imInph/inphiso">source →</a></span>
+</pre>
+</article>
+
+<article class="proj" id="p-inphex-monolyth">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphex-monolyth/README</span></span>
+<span class="l"><span class="b hl">inphex-monolyth</span> <span class="note">Tang Nano 9K</span></span>
+<span class="l wrap">Three machines on a Sipeed Tang Nano 9K, in plain Verilog, built with yosys and nextpnr instead of the Gowin IDE. No downloaded CPU cores.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> <span class="c">cpu8</span>, an 8-bit CPU with its own assembler that counts on screen over HDMI.</span>
+<span class="l wrap"><span class="p">▸</span> <span class="c">doom</span>, a 32-bit RISC-V core running a raycaster written in C.</span>
+<span class="l wrap"><span class="p">▸</span> <span class="c">console</span>, a RISC-V computer with an 80x30 HDMI text console and a bootloader that reads FAT32 off an SD card and runs whatever C program it finds.</span>
+<span class="l wrap"><span class="p">▸</span> There's no framebuffer. 640x480 would need 300 KB and the chip has about 58 KB, so it stores characters and draws them while it scans.</span>
+<span class="l wrap"><span class="p">▸</span> The font on this page is that console's font. Next up: an OS for it.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">Verilog</span> <span class="tag">RISC-V</span> <span class="tag">C</span>    <a href="https://github.com/imInph/inphex-monolyth">source →</a></span>
+</pre>
+</article>
+
+</div>
+</section>
+
+<!-- languages and tools -->
+<section class="win" id="stack" aria-label="languages and tools">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat languages.txt</span>  <span class="note"># what I write</span></span>
+<span class="l"><span class="lang" style="--c:#3178C6">TypeScript</span>  <span class="lang" style="--c:#F7DF1E">JavaScript</span>  <span class="lang" style="--c:#9B6BFF">C#</span>  <span class="lang" style="--c:#4B8BBE">Python</span>  <span class="lang" style="--c:#4EAA25">Bash</span></span>
+<span class="l note wrap">My repos also have Rust, C, Java, PHP and Verilog in them. I don't know those yet, so they're not in this file.</span>
+<span class="l"> </span>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">./linguist ~/repos</span>  <span class="note"># what the repos are actually made of</span></span>
+<span class="l bars" id="bars"><span class="note">counting bytes on github…</span></span>
+<span class="l"> </span>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">which --all tools</span>  <span class="note"># what I use</span></span>
+<span class="l tools"><span>.NET</span><span>ADO.NET</span><span>Node.js</span><span>HTML</span><span>CSS</span><span>MySQL</span><span>SQLite</span><span>Linux</span><span>Raspberry Pi</span><span>Git</span><span>Ollama</span><span>LM Studio</span><span>XAMPP</span><span>yosys</span><span>nextpnr</span></span>
+</pre>
+</section>
+
+<!-- activity -->
+<section class="win" id="year" aria-label="activity">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">./snake --eat contributions</span>  <span class="note"># my GitHub year</span></span>
+<span class="l snake"><img src="https://raw.githubusercontent.com/imInph/imInph/output/snake-dark.svg" alt="A snake eating my contribution graph" loading="lazy"></span>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">git log --all --oneline -8</span>  <span class="note"># live</span></span>
+<span class="l" id="gitlog"><span class="note">fetching…</span></span>
+</pre>
+</section>
+
+<!-- the shell -->
+<section class="win" id="shell" aria-label="interactive shell">
+<pre id="out"><span class="l note">you have a shell. type <span class="c">help</span>, or try <span class="c">snake</span>.</span>
+</pre>
+<label class="prompt"><span class="ps"><span class="p">guest@inphserver</span>:<span class="b" id="cwd">~</span>$ </span><input id="cmd" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="command"></label>
+</section>
+
+<footer>
+<pre><span class="note">set in the 8x16 font my <a href="https://github.com/imInph/inphex-monolyth">Tang Nano console</a> prints over HDMI · <a href="https://github.com/imInph/imInph/tree/main/docs">source</a></span></pre>
+</footer>
+
+</main>
+
+<noscript><style>.win .l{visibility:visible}</style></noscript>
+<script src="main.js"></script>
+</body>
+</html>

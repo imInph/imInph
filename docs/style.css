@@ -1,0 +1,216 @@
+/* everything is sized in font pixels: --p is how many CSS pixels one pixel of the
+   8x16 console font takes, so text, padding and scanlines all land on the same grid */
+
+@font-face {
+  font-family: inphex;
+  src: url(fonts/inphex.woff) format("woff");
+  font-display: block;
+}
+
+:root {
+  --p: 1.5px;
+  --bg: #010409;
+  --win: #0D1117;
+  --edge: #30363D;
+  --text: #E6EDF3;
+  --note: #6E7681;
+  --green: #3FB950;
+  --blue: #58A6FF;
+  --yellow: #D29922;
+  --red: #F85149;
+  --purple: #BC8CFF;
+  --scan: .45;
+  color-scheme: dark;
+}
+
+/* 1.5x lands on whole device pixels only on 2x screens; elsewhere use 1x or 2x */
+@media (max-resolution: 1.49dppx) { :root { --p: 1px; } }
+@media (max-resolution: 1.49dppx) and (min-width: 1400px) { :root { --p: 2px; } }
+@media (max-width: 720px) { :root { --p: 1px; } }
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font: calc(16 * var(--p)) / 1 inphex, ui-monospace, monospace;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
+  font-kerning: none;
+}
+
+::selection { background: var(--blue); color: var(--win); }
+
+main {
+  width: min(100% - 32px, calc(84ch + 44 * var(--p) + 2px));
+  margin: calc(40 * var(--p)) auto calc(24 * var(--p));
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--p));
+}
+
+pre { margin: 0; font: inherit; white-space: normal; }
+
+/* a terminal window, drawn like the README headings: 10px padding, the three
+   buttons in a 34px gutter to the left of the first line */
+.win {
+  position: relative;
+  background: var(--win);
+  border: 1px solid var(--edge);
+  border-radius: calc(5 * var(--p));
+  padding: calc(10 * var(--p)) calc(10 * var(--p)) calc(10 * var(--p)) calc(44 * var(--p));
+  overflow: hidden;
+}
+.win::before {
+  content: "";
+  position: absolute;
+  left: calc(10 * var(--p));
+  top: calc(15 * var(--p));
+  width: calc(6 * var(--p));
+  height: calc(6 * var(--p));
+  background: var(--red);
+  box-shadow: calc(8 * var(--p)) 0 var(--yellow), calc(16 * var(--p)) 0 var(--green);
+}
+/* scanlines: a dark band through the bottom third of every font pixel row */
+.win::after, #boot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--scan);
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 calc(var(--p) * 2 / 3),
+    #000 calc(var(--p) * 2 / 3) var(--p)
+  );
+  background-position: 0 calc(var(--p) * 2 / 3 - var(--p) * 2 / 3);
+}
+html.nocrt .win::after, html.nocrt #boot::after { display: none; }
+
+.l { display: block; white-space: pre; min-height: 1em; }
+.wrap { white-space: pre-wrap; }
+
+/* colours from the headings */
+.p { color: var(--green); }
+.b { color: var(--blue); }
+.c { color: var(--text); }
+.y { color: var(--yellow); }
+.r { color: var(--red); }
+.v { color: var(--purple); }
+.note, .k { color: var(--note); }
+.mac { color: var(--text); }
+.banner { color: var(--blue); line-height: 1; }
+.hl { background: var(--blue); color: var(--win); }
+
+a { color: var(--blue); text-decoration: none; }
+a:hover, a:focus-visible { background: var(--blue); color: var(--win); outline: none; }
+a:hover *, a:focus-visible * { color: var(--win); }
+
+.tag { color: var(--win); background: var(--note); padding: 0 1ch; }
+
+/* ls -l: every row is a link that opens its README below */
+.ls .row { display: block; color: inherit; }
+.ls .row.on { background: #1F2937; }
+.ls .row:hover, .ls .row:focus-visible { background: var(--blue); }
+.hint { display: none; }
+html.js .hint { display: block; }
+
+.projs { margin-top: 1em; }
+.proj + .proj { margin-top: 1em; }
+html.js .proj { display: none; }
+html.js .proj.on { display: block; }
+
+.lang { color: var(--c); }
+.bars .bar { color: var(--c); }
+.tools { white-space: normal; display: flex; flex-wrap: wrap; gap: 0 2ch; }
+.tools span::before { content: "/usr/bin/"; color: var(--note); }
+
+.snake img { display: block; width: 100%; max-width: 100%; height: auto; margin: calc(8 * var(--p)) 0; image-rendering: pixelated; }
+.log .h { color: var(--yellow); }
+
+/* the shell */
+.prompt { display: flex; white-space: pre; cursor: text; }
+.prompt .ps { flex: none; }
+#cmd {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  caret-color: transparent;
+  height: 1em;
+  line-height: 1;
+}
+.prompt { position: relative; }
+.caret {
+  position: absolute;
+  top: calc(2 * var(--p));
+  width: 1ch;
+  height: calc(13 * var(--p));
+  background: var(--blue);
+  pointer-events: none;
+  animation: blink 1.06s steps(1) infinite;
+}
+#shell:not(:focus-within) .caret { background: transparent; box-shadow: inset 0 0 0 var(--p) var(--blue); animation: none; }
+.game { line-height: 1; }
+
+/* the typing effect: lines exist from the start (so nothing jumps), JS reveals them */
+html.js .win:not(.shown) .l { visibility: hidden; }
+html.js .win .l.hide { visibility: hidden; }
+.cur {
+  display: inline-block;
+  width: 1ch;
+  height: calc(13 * var(--p));
+  vertical-align: top;
+  margin-top: calc(2 * var(--p));
+  background: var(--blue);
+  animation: blink 1.06s steps(1) infinite;
+}
+.blink { animation: blink 1.06s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+footer { text-align: center; padding-bottom: calc(24 * var(--p)); }
+
+/* the boot screen: the console's bootloader, for a second */
+#boot { display: none; }
+html.booting #boot {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: #000;
+  padding: calc(16 * var(--p));
+  overflow: hidden;
+}
+html.booting #boot pre { white-space: pre; color: #C0C0C0; }
+html.booting main { visibility: hidden; }
+#boot.off { animation: off .28s ease-in forwards; }
+@keyframes off {
+  0%   { transform: scale(1, 1); filter: brightness(1); }
+  60%  { transform: scale(1, .004); filter: brightness(3); }
+  100% { transform: scale(0, .004); filter: brightness(3); }
+}
+
+@media (max-width: 720px) {
+  main { margin-top: 24px; gap: 16px; }
+  .win { padding-left: calc(10 * var(--p)); padding-top: calc(26 * var(--p)); }
+  .win::before { top: calc(10 * var(--p)); }
+  .ls .perm, .ls .date, .ls .d { display: none; }
+  .l { white-space: pre-wrap; }
+  .ls, .banner, .game, .bars .l, .log { white-space: pre; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cur, .blink, .caret { animation: none; }
+}
+
+.log { overflow: hidden; text-overflow: ellipsis; }
+#out { max-height: 60vh; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--edge) transparent; }
