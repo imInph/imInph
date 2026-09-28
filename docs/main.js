@@ -297,7 +297,7 @@ const COMMANDS = {
     let f = args[0].replace(/^~\//, "");
     if (cwd !== "~" && !f.startsWith("projects/")) f = `projects/${f}`;
     if (f === "README" || f === "about.txt") return COMMANDS.about();
-    if (f === "languages.txt") return print("TypeScript  JavaScript  C#  Python  Bash");
+    if (f === "languages.txt") return print("TypeScript  JavaScript  C#  Rust  Python  Bash");
     if (f.startsWith("secrets")) return print(`cat: ${esc(f)}: Permission denied`);
     const m = f.match(/^projects\/([^/]+)(\/README)?\/?$/);
     if (m && PROJECTS.includes(m[1])) {
