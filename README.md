@@ -20,7 +20,7 @@ then keep rebuilding them until I understand how every part works.
       <img alt="C#" src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
       <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
       <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
-      <br /><br />
+      <br /><br /><br />
       <a href="https://iminph.github.io/inphub-lite/"><b>Try inphub-lite →</b></a>
     </td>
     <td width="33%" align="center" valign="top">
