@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://iminph.github.io/imInph/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/inphex.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -67,7 +67,7 @@
 <span class="l ls"><a class="row" href="#p-inphub" data-p="inphub"><span class="note perm">drwxr-xr-x</span>  <span class="y">C#    </span>  <span class="v">v4.1.0</span>  <span class="note date">2026-09-24</span>  <span class="b">inphub/</span>          <span class="d">my dashboard, self-hosted</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphub-lite" data-p="inphub-lite"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.1.2</span>  <span class="note date">2026-09-27</span>  <span class="b">inphub-lite/</span>     <span class="d">the same, no server</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphner" data-p="inphner"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.2.0</span>  <span class="note date">2026-09-22</span>  <span class="b">inphner/</span>         <span class="d">speedcubing timer</span></a></span>
-<span class="l ls"><a class="row" href="#p-inphish" data-p="inphish"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v5.0.0</span>  <span class="note date">2026-09-27</span>  <span class="b">inphish/</span>         <span class="d">UCI chess engine</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphish" data-p="inphish"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v6.0.0</span>  <span class="note date">2026-09-29</span>  <span class="b">inphish/</span>         <span class="d">UCI chess engine</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphiso" data-p="inphiso"><span class="note perm">-rwxr-xr-x</span>  <span class="y">Bash  </span>  <span class="v">      </span>  <span class="note date">2026-09-10</span>  <span class="p">inphiso</span>*         <span class="d">ISOs to USB, from Linux</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphex-monolyth" data-p="inphex-monolyth"><span class="note perm">drwxr-xr-x</span>  <span class="y">Verilog</span> <span class="v">      </span>  <span class="note date">2026-07-27</span>  <span class="b">inphex-monolyth/</span> <span class="d">computers on an FPGA</span></a></span>
 <span class="l note hint">click one, or use ↑ ↓</span>
@@ -124,13 +124,14 @@
 <article class="proj" id="p-inphish">
 <pre>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphish/README</span></span>
-<span class="l"><span class="b hl">inphish</span> <span class="note">v5.0.0 · GPL-3.0</span></span>
+<span class="l"><span class="b hl">inphish</span> <span class="note">v6.0.0 · GPL-3.0</span></span>
 <span class="l wrap">A UCI chess engine in Rust. No board of its own: load it into any chess GUI and it talks UCI over stdin and stdout.</span>
 <span class="l"> </span>
-<span class="l wrap"><span class="p">▸</span> Its own search: PVS, a transposition table, null-move, LMR, ProbCut, quiescence and Lazy SMP up to 256 threads.</span>
+<span class="l wrap"><span class="p">▸</span> Stockfish 19's search, ported onto inphish's own board and move generator: PVS, singular extensions, LMR, correction histories, Stockfish's time management and Lazy SMP up to 256 threads.</span>
 <span class="l wrap"><span class="p">▸</span> Evaluates with Stockfish 19's NNUE network, run by inphish's own inference code, which matches Stockfish's output exactly.</span>
+<span class="l wrap"><span class="p">▸</span> About 795,000 nodes per second on one thread of an Apple M2.</span>
 <span class="l wrap"><span class="p">▸</span> Syzygy tablebases, Chess960, and an optional book of 6.4 million positions from 2000+ Lichess games.</span>
-<span class="l wrap"><span class="p">▸</span> Every release plays matches against Stockfish. 5.0 scored 12.5 / 20 at its highest setting.</span>
+<span class="l wrap"><span class="p">▸</span> Every release plays matches against Stockfish. 6.0 scored 18.5 / 20 at its highest setting, and 8 / 20 against it at full strength.</span>
 <span class="l"> </span>
 <span class="l"><span class="tag">Rust</span> <span class="tag">UCI</span>    <a href="https://github.com/imInph/inphish/releases/latest">download →</a>  <a href="https://github.com/imInph/inphish">source →</a></span>
 </pre>
@@ -209,6 +210,6 @@
 </main>
 
 <noscript><style>.win .l{visibility:visible}</style></noscript>
-<script src="main.js?v=4"></script>
+<script src="main.js?v=5"></script>
 </body>
 </html>

@@ -34,8 +34,8 @@ then keep rebuilding them until I understand how every part works.
     </td>
     <td width="33%" align="center" valign="top">
       <h3><a href="https://github.com/imInph/inphish">inphish</a></h3>
-      <sub>v5.0</sub>
-      <p>A UCI chess engine you can load into any chess GUI. The search is its own, and the evaluation uses Stockfish 19's NNUE network. Every release is tested in matches against other engines.</p>
+      <sub>v6.0</sub>
+      <p>A UCI chess engine you can load into any chess GUI. It runs a port of Stockfish 19's search and its NNUE network on its own board and move generator. Every release is tested in matches against other engines.</p>
       <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
       <img alt="UCI" src="https://img.shields.io/badge/UCI-17898A?style=flat-square&logo=lichess&logoColor=white" />
       <br /><br />
