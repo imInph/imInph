@@ -17,10 +17,11 @@ then keep rebuilding them until I understand how every part works.
       <h3><a href="https://github.com/imInph/inphub">inphub</a></h3>
       <sub>v4.1</sub>
       <p>My personal dashboard for money, tasks, habits, goals, notes and focus sessions. It runs on my own machine and has an optional AI chat through Claude, Ollama or LM Studio.</p>
+      <br />
       <img alt="C#" src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
       <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
       <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
-      <br /><br /><br />
+      <br /><br />
       <a href="https://iminph.github.io/inphub-lite/"><b>Try inphub-lite →</b></a>
     </td>
     <td width="33%" align="center" valign="top">
