@@ -26,7 +26,7 @@ then keep rebuilding them until I understand how every part works.
     </td>
     <td width="33%" align="center" valign="top">
       <h3><a href="https://github.com/imInph/inphner">inphner</a></h3>
-      <sub>v1.2</sub>
+      <sub>v1.3</sub>
       <p>A speedcubing timer and algorithm trainer, like csTimer with a calmer interface. It works offline, keeps everything in your browser and can connect to a Stackmat or a GAN smart cube.</p>
       <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
       <img alt="PWA" src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" />
