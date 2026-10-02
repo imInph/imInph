@@ -31,7 +31,7 @@ then keep rebuilding them until I understand how every part works.
       <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
       <img alt="PWA" src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" />
       <br /><br />
-      <a href="https://iminph.github.io/inphner/"><b>Try it →</b></a>
+      <a href="https://inphner.com"><b>Try it →</b></a>
     </td>
     <td width="33%" align="center" valign="top">
       <h3><a href="https://github.com/imInph/inphish">inphish</a></h3>
