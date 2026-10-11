@@ -26,7 +26,7 @@ then keep rebuilding them until I understand how every part works.
     </td>
     <td width="33%" align="center" valign="top">
       <h3><a href="https://github.com/imInph/inphner">inphner</a></h3>
-      <sub>v1.3</sub>
+      <sub>v1.5</sub>
       <p>A speedcubing timer and algorithm trainer, like csTimer with a calmer interface. It works offline, keeps everything in your browser and can connect to a Stackmat or a GAN smart cube.</p>
       <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
       <img alt="PWA" src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" />
@@ -35,7 +35,7 @@ then keep rebuilding them until I understand how every part works.
     </td>
     <td width="33%" align="center" valign="top">
       <h3><a href="https://github.com/imInph/inphish">inphish</a></h3>
-      <sub>v6.1</sub>
+      <sub>v7.0</sub>
       <p>A UCI chess engine you can load into any chess GUI. It runs a port of Stockfish 19's search and its NNUE network on its own board and move generator. Every release is tested in matches against other engines.</p>
       <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
       <img alt="UCI" src="https://img.shields.io/badge/UCI-17898A?style=flat-square&logo=lichess&logoColor=white" />
