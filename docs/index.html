@@ -63,11 +63,12 @@
 <section class="win" id="projects" aria-label="projects">
 <pre>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">ls -l projects/</span>  <span class="note"># what I'm building</span></span>
-<span class="l note">total 6</span>
+<span class="l note">total 7</span>
 <span class="l ls"><a class="row" href="#p-inphub" data-p="inphub"><span class="note perm">drwxr-xr-x</span>  <span class="y">C#    </span>  <span class="v">v4.1.0</span>  <span class="note date">2026-09-24</span>  <span class="b">inphub/</span>          <span class="d">my dashboard, self-hosted</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphub-lite" data-p="inphub-lite"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.1.2</span>  <span class="note date">2026-09-27</span>  <span class="b">inphub-lite/</span>     <span class="d">the same, no server</span></a></span>
-<span class="l ls"><a class="row" href="#p-inphner" data-p="inphner"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.3.0</span>  <span class="note date">2026-09-22</span>  <span class="b">inphner/</span>         <span class="d">speedcubing timer</span></a></span>
-<span class="l ls"><a class="row" href="#p-inphish" data-p="inphish"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v6.1.0</span>  <span class="note date">2026-09-29</span>  <span class="b">inphish/</span>         <span class="d">UCI chess engine</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphner" data-p="inphner"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.5.0</span>  <span class="note date">2026-09-22</span>  <span class="b">inphner/</span>         <span class="d">speedcubing timer</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphish" data-p="inphish"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v7.0.0</span>  <span class="note date">2026-09-29</span>  <span class="b">inphish/</span>         <span class="d">UCI chess engine</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphiso-gui" data-p="inphiso-gui"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v1.0.0</span>  <span class="note date">2026-10-04</span>  <span class="b">inphiso-gui/</span>     <span class="d">USB flasher GUI</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphiso" data-p="inphiso"><span class="note perm">-rwxr-xr-x</span>  <span class="y">Bash  </span>  <span class="v">      </span>  <span class="note date">2026-09-10</span>  <span class="p">inphiso</span>*         <span class="d">ISOs to USB, from Linux</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphex-monolyth" data-p="inphex-monolyth"><span class="note perm">drwxr-xr-x</span>  <span class="y">Verilog</span> <span class="v">      </span>  <span class="note date">2026-07-27</span>  <span class="b">inphex-monolyth/</span> <span class="d">computers on an FPGA</span></a></span>
 <span class="l note hint">click one, or use ↑ ↓</span>
@@ -108,7 +109,7 @@
 <article class="proj" id="p-inphner">
 <pre>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphner/README</span></span>
-<span class="l"><span class="b hl">inphner</span> <span class="note">v1.3.0</span></span>
+<span class="l"><span class="b hl">inphner</span> <span class="note">v1.5.0</span></span>
 <span class="l wrap">A speedcubing timer and algorithm trainer. csTimer rebuilt with a calmer interface, clearer stats and a proper case trainer. Everything stays in your browser.</span>
 <span class="l"> </span>
 <span class="l wrap"><span class="p">▸</span> Random-state scrambles for every WCA event, generated in a worker.</span>
@@ -124,16 +125,34 @@
 <article class="proj" id="p-inphish">
 <pre>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphish/README</span></span>
-<span class="l"><span class="b hl">inphish</span> <span class="note">v6.1.0 · GPL-3.0</span></span>
+<span class="l"><span class="b hl">inphish</span> <span class="note">v7.0.0 · GPL-3.0</span></span>
 <span class="l wrap">A UCI chess engine in Rust. No board of its own: load it into any chess GUI and it talks UCI over stdin and stdout.</span>
 <span class="l"> </span>
 <span class="l wrap"><span class="p">▸</span> Stockfish 19's search, ported onto inphish's own board and move generator: PVS, singular extensions, LMR, correction histories, Stockfish's time management and Lazy SMP up to 256 threads.</span>
 <span class="l wrap"><span class="p">▸</span> Evaluates with Stockfish 19's NNUE network, run by inphish's own inference code, which matches Stockfish's output exactly.</span>
 <span class="l wrap"><span class="p">▸</span> About 861,000 nodes per second on one thread of an Apple M2.</span>
 <span class="l wrap"><span class="p">▸</span> Syzygy tablebases, Chess960, and an optional book of 6.4 million positions from 2000+ Lichess games.</span>
-<span class="l wrap"><span class="p">▸</span> Every release plays matches against Stockfish. 6.1 scored 20 / 20 at its highest setting, and 8.5 / 20 against it at full strength.</span>
+<span class="l wrap"><span class="p">▸</span> Every release plays matches against Stockfish. 7.0 scored 21/40 against 6.2.0 (6 W / 4 L / 30 D); 10.5/20 against Stockfish 19 at full strength</span>
 <span class="l"> </span>
 <span class="l"><span class="tag">Rust</span> <span class="tag">UCI</span>    <a href="https://github.com/imInph/inphish/releases/latest">download →</a>  <a href="https://github.com/imInph/inphish">source →</a></span>
+</pre>
+</article>
+
+<article class="proj" id="p-inphiso-gui">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphiso-gui/README</span></span>
+<span class="l"><span class="b hl">inphiso-gui</span> <span class="note">v1.0.0 · GPL-3.0</span></span>
+<span class="l wrap">Flash Windows and Linux images to USB drives, on Windows, macOS and Linux.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> Pick a local .iso / .img (plain or .xz / .gz / .bz2 / .zst), drop one on the window, or paste an HTTPS download link (downloads resume if interrupted).</span>
+<span class="l wrap"><span class="p">▸</span> Checks the image's SHA-256 against a published checksum (SHA256SUMS, <file>.sha256, Fedora CHECKSUM files) found next to it, or one you paste.</span>
+<span class="l wrap"><span class="p">▸</span> Lists removable drives only. The disk your system runs from is never listed, even with "Show all drives" on (it's traced through LVM and LUKS on Linux).</span>
+<span class="l wrap"><span class="p">▸</span> Linux and hybrid ISOs, disk images: written byte for byte, decompressing on the fly.</span>
+<span class="l wrap"><span class="p">▸</span> Windows installer ISOs: detected automatically, written as a FAT32 drive (MBR or GPT), with install.wim split into .swm parts when it's over 4 GiB. Windows Setup puts them back together by itself. MBR drives boot on both UEFI and legacy BIOS PCs, using inphiso's own boot code (crates/core/boot/).</span>
+<span class="l wrap"><span class="p">▸</span> Verifies the drive by reading it back, then ejects it.</span>
+<span class="l wrap"><span class="p">▸</span> Asks for your password (or UAC) only for the write itself. The app never runs as admin.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">Rust</span>    <a href="https://github.com/imInph/inphiso-gui/releases/latest">download →</a>  <a href="https://github.com/imInph/inphiso-gui">source →</a></span>
 </pre>
 </article>
 
