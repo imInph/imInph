@@ -26,7 +26,7 @@ then keep rebuilding them until I understand how every part works.
     </td>
     <td width="33%" align="center" valign="top">
       <h3><a href="https://github.com/imInph/inphner">inphner</a></h3>
-      <sub>v1.5</sub>
+      <sub>v1.5.1</sub>
       <p>A speedcubing timer and algorithm trainer, like csTimer with a calmer interface. It works offline, keeps everything in your browser and can connect to a Stackmat or a GAN smart cube.</p>
       <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
       <img alt="PWA" src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" />
@@ -43,9 +43,41 @@ then keep rebuilding them until I understand how every part works.
       <a href="https://github.com/imInph/inphish/releases/latest"><b>Download →</b></a>
     </td>
   </tr>
+  <tr>
+    <td width="33%" align="center" valign="top">
+      <h3><a href="https://github.com/imInph/inphAIweb">inphAIweb</a></h3>
+      <sub>on my server</sub>
+      <p>My own local AI site: chat with models from LM Studio and Ollama, search the web and my own documents, and generate images and videos, all on an AMD GPU at home.</p>
+      <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+      <img alt="Flask" src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
+      <img alt="ROCm" src="https://img.shields.io/badge/ROCm-ED1C24?style=flat-square&logo=amd&logoColor=white" />
+      <br /><br />
+      <a href="https://github.com/imInph/inphAIweb"><b>Source →</b></a>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <h3><a href="https://github.com/imInph/inphiso-gui">inphiso</a></h3>
+      <sub>v1.0</sub>
+      <p>Flashes Windows and Linux images to USB drives on Windows, macOS and Linux, including big Windows 11 ISOs on FAT32. The desktop successor to my <a href="https://github.com/imInph/inphiso">inphiso script</a>.</p>
+      <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
+      <img alt="Tauri" src="https://img.shields.io/badge/Tauri-24C8DB?style=flat-square&logo=tauri&logoColor=white" />
+      <br /><br />
+      <a href="https://github.com/imInph/inphiso-gui/releases/latest"><b>Download →</b></a>
+    </td>
+    <td width="33%" align="center" valign="top">
+      <h3><a href="https://github.com/imInph/nakano-engine">nakano-engine</a></h3>
+      <sub>early</sub>
+      <p>A UCI chess engine in C that I'm building with Mai and Alp, the authors of two engines inphish plays against. Each of us owns a part of it.</p>
+      <img alt="C" src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" />
+      <img alt="UCI" src="https://img.shields.io/badge/UCI-17898A?style=flat-square&logo=lichess&logoColor=white" />
+      <br /><br />
+      <a href="https://github.com/imInph/nakano-engine"><b>Source →</b></a>
+    </td>
+  </tr>
 </table>
 
-<br />
+<sub>Also: <a href="https://github.com/imInph/inphex-monolyth">inphex-monolyth</a>, three computers on an FPGA · <a href="https://github.com/imInph/inphub-lite">inphub-lite</a>, inphub with no server · school work in <a href="https://github.com/imInph/NETAPProjeler">NETAPProjeler</a> and <a href="https://github.com/imInph/WTUGProjeler">WTUGProjeler</a></sub>
+
+<br /><br />
 
 <h3><img src="./assets/headings/languages.svg" alt="Languages I write" height="54" /></h3>
 
@@ -76,6 +108,12 @@ then keep rebuilding them until I understand how every part works.
 <img alt="Ollama" src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" />
 <img alt="LM Studio" src="https://img.shields.io/badge/LM_Studio-4338CA?style=flat-square&logoColor=white" />
 <img alt="XAMPP" src="https://img.shields.io/badge/XAMPP-FB7A24?style=flat-square&logo=xampp&logoColor=white" />
+<br />
+<img alt="Tauri" src="https://img.shields.io/badge/Tauri-24C8DB?style=flat-square&logo=tauri&logoColor=white" />
+<img alt="Flask" src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
+<img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+<img alt="ROCm" src="https://img.shields.io/badge/ROCm-ED1C24?style=flat-square&logo=amd&logoColor=white" />
+<img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
 
 <br /><br />
 

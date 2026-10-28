@@ -227,8 +227,11 @@ const LINKS = {
   github: `https://github.com/${USER}`,
   inphub: "https://github.com/imInph/inphub",
   "inphub-lite": "https://iminph.github.io/inphub-lite/",
-  inphner: "https://iminph.github.io/inphner/",
+  inphner: "https://inphner.com",
   inphish: "https://github.com/imInph/inphish/releases/latest",
+  "nakano-engine": "https://github.com/imInph/nakano-engine",
+  inphAIweb: "https://github.com/imInph/inphAIweb",
+  "inphiso-gui": "https://github.com/imInph/inphiso-gui/releases/latest",
   inphiso: "https://github.com/imInph/inphiso",
   "inphex-monolyth": "https://github.com/imInph/inphex-monolyth",
 };
@@ -325,12 +328,14 @@ const COMMANDS = {
       "<span class=\"note\">───────────────</span>",
       `<span class="b">OS</span>       Linux`,
       `<span class="b">Shell</span>    bash`,
+      `<span class="b">GPU</span>      AMD RX 6700 XT 12 GB <span class="note">(ROCm)</span>`,
+      `<span class="b">Memory</span>   about 40 GB`,
       `<span class="b">Font</span>     inphex 8x16`,
       `<span class="b">Repos</span>    ${$("#repocount").textContent} public`,
       `<span class="b">Uptime</span>   ${Math.floor(up / 60)}m ${up % 60}s <span class="note">(this tab)</span>`,
       `<span class="b">You</span>      ${browser}, ${screen.width}x${screen.height}`,
     ];
-    logo.forEach((l, i) => print(`<span class="b">${l.padEnd(34)}</span>${info[i] || ""}`));
+    for (let i = 0; i < Math.max(logo.length, info.length); i++) print(`<span class="b">${(logo[i] || "").padEnd(34)}</span>${info[i] || ""}`);
     print(["#F85149", "#D29922", "#3FB950", "#58A6FF", "#BC8CFF", "#E6EDF3"].map(c => `<span style="color:${c}">███</span>`).join(""));
   },
   git([sub]) {

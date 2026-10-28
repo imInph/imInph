@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://iminph.github.io/imInph/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/inphex.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -49,13 +49,13 @@
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat README</span>  <span class="note"># the longer version</span></span>
 <span class="l wrap">Into Linux and self-hosted stuff. I mostly build tools for myself, then keep rebuilding them until I understand how every part works.</span>
 <span class="l"> </span>
-<span class="l wrap">A lot of it starts as a fix for something that annoyed me: csTimer felt noisy, and flashing a Windows ISO from Linux kept breaking. Then it turns into a way to learn. A chess engine to learn search, an FPGA to learn how a computer actually boots.</span>
+<span class="l wrap">A lot of it starts as a fix for something that annoyed me: csTimer felt noisy, and flashing a Windows ISO from Linux kept breaking. Then it turns into a way to learn. A chess engine to learn search, an FPGA to learn how a computer actually boots. Lately it's local AI: my server runs its own chat, image and video models.</span>
 <span class="l"> </span>
 <span class="l"><span class="k">name  </span>    Arda</span>
 <span class="l"><span class="k">from  </span>    Turkey</span>
 <span class="l"><span class="k">does  </span>    student, builds tools</span>
-<span class="l wrap"><span class="k">into  </span>    linux, self-hosting, speedcubing, chess engines, fpgas</span>
-<span class="l"><span class="k">github</span>    <a href="https://github.com/imInph">@imInph</a> since May 2024, <span id="repocount">7</span> public repos</span>
+<span class="l wrap"><span class="k">into  </span>    linux, self-hosting, local AI, speedcubing, chess engines, fpgas</span>
+<span class="l"><span class="k">github</span>    <a href="https://github.com/imInph">@imInph</a> since May 2024, <span id="repocount">14</span> public repos</span>
 </pre>
 </section>
 
@@ -63,14 +63,17 @@
 <section class="win" id="projects" aria-label="projects">
 <pre>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">ls -l projects/</span>  <span class="note"># what I'm building</span></span>
-<span class="l note">total 7</span>
+<span class="l note">total 10</span>
 <span class="l ls"><a class="row" href="#p-inphub" data-p="inphub"><span class="note perm">drwxr-xr-x</span>  <span class="y">C#    </span>  <span class="v">v4.1.0</span>  <span class="note date">2026-09-24</span>  <span class="b">inphub/</span>          <span class="d">my dashboard, self-hosted</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphub-lite" data-p="inphub-lite"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.1.2</span>  <span class="note date">2026-09-27</span>  <span class="b">inphub-lite/</span>     <span class="d">the same, no server</span></a></span>
-<span class="l ls"><a class="row" href="#p-inphner" data-p="inphner"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.5.0</span>  <span class="note date">2026-09-22</span>  <span class="b">inphner/</span>         <span class="d">speedcubing timer</span></a></span>
-<span class="l ls"><a class="row" href="#p-inphish" data-p="inphish"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v7.0.0</span>  <span class="note date">2026-09-29</span>  <span class="b">inphish/</span>         <span class="d">UCI chess engine</span></a></span>
-<span class="l ls"><a class="row" href="#p-inphiso-gui" data-p="inphiso-gui"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v1.0.0</span>  <span class="note date">2026-10-04</span>  <span class="b">inphiso-gui/</span>     <span class="d">USB flasher GUI</span></a></span>
-<span class="l ls"><a class="row" href="#p-inphiso" data-p="inphiso"><span class="note perm">-rwxr-xr-x</span>  <span class="y">Bash  </span>  <span class="v">      </span>  <span class="note date">2026-09-10</span>  <span class="p">inphiso</span>*         <span class="d">ISOs to USB, from Linux</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphner" data-p="inphner"><span class="note perm">drwxr-xr-x</span>  <span class="y">TS    </span>  <span class="v">v1.5.1</span>  <span class="note date">2026-10-26</span>  <span class="b">inphner/</span>         <span class="d">speedcubing timer</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphish" data-p="inphish"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v7.0.0</span>  <span class="note date">2026-10-04</span>  <span class="b">inphish/</span>         <span class="d">UCI chess engine</span></a></span>
+<span class="l ls"><a class="row" href="#p-nakano-engine" data-p="nakano-engine"><span class="note perm">drwxr-xr-x</span>  <span class="y">C     </span>  <span class="v">      </span>  <span class="note date">2026-10-04</span>  <span class="b">nakano-engine/</span>   <span class="d">chess engine, with friends</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphAIweb" data-p="inphAIweb"><span class="note perm">drwxr-xr-x</span>  <span class="y">Python</span>  <span class="v">      </span>  <span class="note date">2026-10-28</span>  <span class="b">inphAIweb/</span>       <span class="d">local AI, on my server</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphiso-gui" data-p="inphiso-gui"><span class="note perm">drwxr-xr-x</span>  <span class="y">Rust  </span>  <span class="v">v1.0.0</span>  <span class="note date">2026-10-04</span>  <span class="b">inphiso-gui/</span>     <span class="d">USB flasher app</span></a></span>
+<span class="l ls"><a class="row" href="#p-inphiso" data-p="inphiso"><span class="note perm">-rwxr-xr-x</span>  <span class="y">Bash  </span>  <span class="v">      </span>  <span class="note date">2026-09-10</span>  <span class="p">inphiso</span>*         <span class="d">ISOs to USB, the script</span></a></span>
 <span class="l ls"><a class="row" href="#p-inphex-monolyth" data-p="inphex-monolyth"><span class="note perm">drwxr-xr-x</span>  <span class="y">Verilog</span> <span class="v">      </span>  <span class="note date">2026-07-27</span>  <span class="b">inphex-monolyth/</span> <span class="d">computers on an FPGA</span></a></span>
+<span class="l ls"><a class="row" href="#p-school" data-p="school"><span class="note perm">drwxr-xr-x</span>  <span class="y">C#    </span>  <span class="v">      </span>  <span class="note date">2026-10-24</span>  <span class="b">school/</span>          <span class="d">what I make for class</span></a></span>
 <span class="l note hint">click one, or use ↑ ↓</span>
 </pre>
 
@@ -109,10 +112,10 @@
 <article class="proj" id="p-inphner">
 <pre>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphner/README</span></span>
-<span class="l"><span class="b hl">inphner</span> <span class="note">v1.5.0</span></span>
-<span class="l wrap">A speedcubing timer and algorithm trainer. csTimer rebuilt with a calmer interface, clearer stats and a proper case trainer. Everything stays in your browser.</span>
+<span class="l"><span class="b hl">inphner</span> <span class="note">v1.5.1</span></span>
+<span class="l wrap">A speedcubing timer and algorithm trainer. csTimer rebuilt with a calmer interface, clearer stats and a proper case trainer. Everything stays in your browser, with optional sync through your own Google Drive.</span>
 <span class="l"> </span>
-<span class="l wrap"><span class="p">▸</span> Random-state scrambles for every WCA event, generated in a worker.</span>
+<span class="l wrap"><span class="p">▸</span> Random-state scrambles for every WCA event and FTO, generated in a worker. Cross, F2L and last-layer practice come pre-solved up to that step.</span>
 <span class="l wrap"><span class="p">▸</span> WCA-correct averages that update in a few ms, even at 50 000 solves.</span>
 <span class="l wrap"><span class="p">▸</span> Trainer for PLL, OLL and F2L with spaced repetition. Every bundled alg is checked by tests.</span>
 <span class="l wrap"><span class="p">▸</span> Optimal cross, XCross, EOLine and Roux block hints in any colour.</span>
@@ -138,6 +141,36 @@
 </pre>
 </article>
 
+<article class="proj" id="p-nakano-engine">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/nakano-engine/README</span></span>
+<span class="l"><span class="b hl">nakano-engine</span> <span class="note">with Mai and Alp</span></span>
+<span class="l wrap">A UCI chess engine in C17 that I'm building with Mai and Alp, who wrote <a href="https://github.com/Justmaii/MaiEngineV3">MaiEngine</a> and <a href="https://github.com/ALPDM447/MorstiliaChessEngine">Morstilia</a>, two of the engines inphish plays its matches against. Each of us owns a part of it and replaces it over time.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> Bitboards with magic sliders and legal move generation with check and pin masks, checked by perft.</span>
+<span class="l wrap"><span class="p">▸</span> Alpha-beta search with null-move pruning, late move reductions, a lock-free transposition table and pondering.</span>
+<span class="l wrap"><span class="p">▸</span> No dependencies beyond the C standard library. An NNUE evaluation is planned.</span>
+<span class="l wrap"><span class="p">▸</span> Early development: correct and playable, deliberately simple for now.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">C</span> <span class="tag">UCI</span>    <a href="https://github.com/imInph/nakano-engine">source →</a></span>
+</pre>
+</article>
+<article class="proj" id="p-inphAIweb">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphAIweb/README</span></span>
+<span class="l"><span class="b hl">inphAIweb</span> <span class="note">runs on inphserver</span></span>
+<span class="l wrap">My own local AI site: chat with models from LM Studio and Ollama, and generate images and videos, all from one page. It runs on my server, on Linux and an AMD RX 6700 XT through ROCm.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> Chats with files and images attached, kept versions of every edit and regenerated reply, and up to three models answering side by side.</span>
+<span class="l wrap"><span class="p">▸</span> Knowledge collections: drop in documents and the model answers from the best matching passages, with numbered sources.</span>
+<span class="l wrap"><span class="p">▸</span> Web search through a SearXNG instance I run myself.</span>
+<span class="l wrap"><span class="p">▸</span> Images with WAI-Illustrious v17 and Z-Image-Turbo, videos with Wan2.2 5B, all in one queue for the GPU.</span>
+<span class="l wrap"><span class="p">▸</span> Accounts with private chats and files, personas, saved prompts, and talking to it through Whisper.</span>
+<span class="l wrap"><span class="p">▸</span> It grew out of two smaller experiments: an image generation server and a video generation script for AMD GPUs.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">Python</span> <span class="tag">Flask</span> <span class="tag">PyTorch</span> <span class="tag">ROCm</span> <span class="tag">SQLite</span>    <a href="https://github.com/imInph/inphAIweb">source →</a></span>
+</pre>
+</article>
 <article class="proj" id="p-inphiso-gui">
 <pre>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphiso-gui/README</span></span>
@@ -145,14 +178,14 @@
 <span class="l wrap">Flash Windows and Linux images to USB drives, on Windows, macOS and Linux.</span>
 <span class="l"> </span>
 <span class="l wrap"><span class="p">▸</span> Pick a local .iso / .img (plain or .xz / .gz / .bz2 / .zst), drop one on the window, or paste an HTTPS download link (downloads resume if interrupted).</span>
-<span class="l wrap"><span class="p">▸</span> Checks the image's SHA-256 against a published checksum (SHA256SUMS, <file>.sha256, Fedora CHECKSUM files) found next to it, or one you paste.</span>
+<span class="l wrap"><span class="p">▸</span> Checks the image's SHA-256 against a published checksum (SHA256SUMS, &lt;file&gt;.sha256, Fedora CHECKSUM files) found next to it, or one you paste.</span>
 <span class="l wrap"><span class="p">▸</span> Lists removable drives only. The disk your system runs from is never listed, even with "Show all drives" on (it's traced through LVM and LUKS on Linux).</span>
 <span class="l wrap"><span class="p">▸</span> Linux and hybrid ISOs, disk images: written byte for byte, decompressing on the fly.</span>
 <span class="l wrap"><span class="p">▸</span> Windows installer ISOs: detected automatically, written as a FAT32 drive (MBR or GPT), with install.wim split into .swm parts when it's over 4 GiB. Windows Setup puts them back together by itself. MBR drives boot on both UEFI and legacy BIOS PCs, using inphiso's own boot code (crates/core/boot/).</span>
 <span class="l wrap"><span class="p">▸</span> Verifies the drive by reading it back, then ejects it.</span>
 <span class="l wrap"><span class="p">▸</span> Asks for your password (or UAC) only for the write itself. The app never runs as admin.</span>
 <span class="l"> </span>
-<span class="l"><span class="tag">Rust</span>    <a href="https://github.com/imInph/inphiso-gui/releases/latest">download →</a>  <a href="https://github.com/imInph/inphiso-gui">source →</a></span>
+<span class="l"><span class="tag">Rust</span> <span class="tag">Tauri</span> <span class="tag">TypeScript</span>    <a href="https://github.com/imInph/inphiso-gui/releases/latest">download →</a>  <a href="https://github.com/imInph/inphiso-gui">source →</a></span>
 </pre>
 </article>
 
@@ -160,7 +193,7 @@
 <pre>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/inphiso/README</span></span>
 <span class="l"><span class="b hl">inphiso</span></span>
-<span class="l wrap">One Bash script that flashes Windows and Linux images to USB drives from Linux, including the parts that usually break.</span>
+<span class="l wrap">One Bash script that flashes Windows and Linux images to USB drives from Linux, including the parts that usually break. inphiso-gui is its desktop successor.</span>
 <span class="l"> </span>
 <span class="l wrap"><span class="p">▸</span> Splits install.wim into .swm chunks when it's over FAT32's 4 GiB limit, which is basically every Windows 11 ISO.</span>
 <span class="l wrap"><span class="p">▸</span> Streams .xz, .gz, .bz2 and .zst images straight into dd. Nothing gets unpacked first.</span>
@@ -187,6 +220,19 @@
 </pre>
 </article>
 
+<article class="proj" id="p-school">
+<pre>
+<span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">cat projects/school/README</span></span>
+<span class="l"><span class="b hl">school/</span> <span class="note">okul</span></span>
+<span class="l wrap">Projects from school, mostly in Turkish.</span>
+<span class="l"> </span>
+<span class="l wrap"><span class="p">▸</span> <a href="https://github.com/imInph/NETAPProjeler">NETAPProjeler</a>: every C# and Windows Forms project I've made, for class and on my own.</span>
+<span class="l wrap"><span class="p">▸</span> <a href="https://github.com/imInph/WTUGProjeler">WTUGProjeler</a>: web projects for class.</span>
+<span class="l"> </span>
+<span class="l"><span class="tag">C#</span> <span class="tag">Windows Forms</span> <span class="tag">HTML</span>    </span>
+</pre>
+</article>
+
 </div>
 </section>
 
@@ -201,7 +247,7 @@
 <span class="l bars" id="bars"><span class="note">counting bytes on github…</span></span>
 <span class="l"> </span>
 <span class="l" data-cmd><span class="p">inph@inphserver</span>:<span class="b">~</span>$ <span class="c">which --all tools</span>  <span class="note"># what I use</span></span>
-<span class="l tools"><span>.NET</span><span>ADO.NET</span><span>Node.js</span><span>HTML</span><span>CSS</span><span>MySQL</span><span>SQLite</span><span>Linux</span><span>Raspberry Pi</span><span>Git</span><span>Ollama</span><span>LM Studio</span><span>XAMPP</span><span>yosys</span><span>nextpnr</span></span>
+<span class="l tools"><span>.NET</span><span>ADO.NET</span><span>Node.js</span><span>HTML</span><span>CSS</span><span>MySQL</span><span>SQLite</span><span>Linux</span><span>Raspberry Pi</span><span>Git</span><span>Ollama</span><span>LM Studio</span><span>XAMPP</span><span>yosys</span><span>nextpnr</span><span>Tauri</span><span>Flask</span><span>PyTorch</span><span>ROCm</span><span>Docker</span></span>
 </pre>
 </section>
 
@@ -229,6 +275,6 @@
 </main>
 
 <noscript><style>.win .l{visibility:visible}</style></noscript>
-<script src="main.js?v=6"></script>
+<script src="main.js?v=7"></script>
 </body>
 </html>
